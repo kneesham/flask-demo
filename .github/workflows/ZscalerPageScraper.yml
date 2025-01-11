@@ -1,0 +1,9 @@
+name: ZscalerIpConfig
+on:
+    workflow_dispatch:
+jobs:
+  get-zscaler-ips:
+    runs-on: ubuntu-latest
+    steps:
+        - run: |
+            curl https://config.zscaler.com/api/zscalertwo.net/future/json
