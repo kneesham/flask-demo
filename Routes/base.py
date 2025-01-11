@@ -1,6 +1,8 @@
-from flask import Flask, request
+from flask import Blueprint
 
-@app.route('/', methods=['POST'])
+auth_blueprint = Blueprint('base', __name__)
+
+@auth_blueprint.route('/', methods=['POST'])
 def receive_data():
     if request.method == 'POST':
         # Access the data sent in the POST request
